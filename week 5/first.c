@@ -4,13 +4,13 @@ int main()
 printf("Enter number of values");
 scanf("%d",&n);
 int a[n];
-for(i=1;i<n+1;i++)
+for(i=0;i<n;i++)
 {
-	printf("Enter the %d value\n",i);
+	printf("Enter the %d value\n",i+1);
 	scanf("%d",&a[i]);
 }
-for(i=0;i<n;i++)
-for(j=0;j<n-i;j++)
+for(i=0;i<n-1;i++)
+for(j=0;j<n-i-1;j++)
 if(a[j]>a[j+1])
 {
 	c=a[j];
@@ -24,6 +24,6 @@ for(i=0;i<n;i++)
 {
 	s=s+a[i];
 }
-printf("the average is %d",s/n);
+printf("the average is %f",(float)s/n);
 return 0;
 }
